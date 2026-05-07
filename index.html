@@ -9,216 +9,119 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="Valuta" />
   <title>Valuta Converter</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+CiAgPGRlZnM+CiAgICA8cmFkaWFsR3JhZGllbnQgaWQ9ImJnIiBjeD0iNDAlIiBjeT0iMzUlIiByPSI3MCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTExODI3Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBhMGEwZiIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ29sZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmMGNjN2EiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNkNGE4NTMiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYjA4ODQwIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGZpbHRlciBpZD0iZ2xvdyI+CiAgICAgIDxmZURyb3BTaGFkb3cgZHg9IjAiIGR5PSIwIiBzdGREZXZpYXRpb249IjgiIGZsb29kLWNvbG9yPSIjZDRhODUzIiBmbG9vZC1vcGFjaXR5PSIwLjUiLz4KICAgIDwvZmlsdGVyPgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIgZmlsbD0idXJsKCNiZykiLz4KICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZDRhODUzIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1vcGFjaXR5PSIwLjIiLz4KICA8dGV4dCB4PSIyNTYiIHk9IjIyMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTYwIiBmaWxsPSJ1cmwoI2dvbGQpIiBmaWx0ZXI9InVybCgjZ2xvdykiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTIsMCkiPuKCrDwvdGV4dD4KICA8dGV4dCB4PSIyNTYiIHk9IjIyMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTYwIiBmaWxsPSJ1cmwoI2dvbGQpIiBmaWx0ZXI9InVybCgjZ2xvdykiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExMiwwKSI+JDwvdGV4dD4KICA8dGV4dCB4PSIyNTYiIHk9IjQxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTYwIiBmaWxsPSJ1cmwoI2dvbGQpIiBmaWx0ZXI9InVybCgjZ2xvdykiPsKjPC90ZXh0Pgo8L3N2Zz4=" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+CiAgPGRlZnM+CiAgICA8cmFkaWFsR3JhZGllbnQgaWQ9ImJnIiBjeD0iNDAlIiBjeT0iMzUlIiByPSI3MCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTExODI3Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBhMGEwZiIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ29sZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmMGNjN2EiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNkNGE4NTMiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYjA4ODQwIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGZpbHRlciBpZD0iZ2xvdyI+CiAgICAgIDxmZURyb3BTaGFkb3cgZHg9IjAiIGR5PSIwIiBzdGREZXZpYXRpb249IjgiIGZsb29kLWNvbG9yPSIjZDRhODUzIiBmbG9vZC1vcGFjaXR5PSIwLjUiLz4KICAgIDwvZmlsdGVyPgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIgZmlsbD0idXJsKCNiZykiLz4KICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZDRhODUzIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1vcGFjaXR5PSIwLjIiLz4KICA8dGV4dCB4PSIyNTYiIHk9IjIyMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTYwIiBmaWxsPSJ1cmwoI2dvbGQpIiBmaWx0ZXI9InVybCgjZ2xvdykiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTIsMCkiPuKCrDwvdGV4dD4KICA8dGV4dCB4PSIyNTYiIHk9IjIyMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTYwIiBmaWxsPSJ1cmwoI2dvbGQpIiBmaWx0ZXI9InVybCgjZ2xvdykiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExMiwwKSI+JDwvdGV4dD4KICA8dGV4dCB4PSIyNTYiIHk9IjQxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTYwIiBmaWxsPSJ1cmwoI2dvbGQpIiBmaWx0ZXI9InVybCgjZ2xvdykiPsKjPC90ZXh0Pgo8L3N2Zz4=" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --gold: #d4a853;
-      --gold-dim: rgba(212,168,83,0.18);
-      --gold-glow: rgba(212,168,83,0.07);
-      --cream: #f5f0e8;
-      --muted: #6b7280;
-      --card-bg: rgba(255,255,255,0.025);
-      --input-bg: rgba(255,255,255,0.06);
+      --gold: #d4a853; --gold-dim: rgba(212,168,83,0.18); --gold-glow: rgba(212,168,83,0.07);
+      --cream: #f5f0e8; --muted: #6b7280; --card-bg: rgba(255,255,255,0.025); --input-bg: rgba(255,255,255,0.06);
     }
-
     body {
-      min-height: 100vh; min-height: 100dvh;
-      background: #0a0a0f;
-      background-image:
-        radial-gradient(ellipse at 20% 10%, rgba(212,168,83,0.06) 0%, transparent 55%),
+      min-height: 100dvh; background: #0a0a0f;
+      background-image: radial-gradient(ellipse at 20% 10%, rgba(212,168,83,0.06) 0%, transparent 55%),
         radial-gradient(ellipse at 80% 90%, rgba(20,10,50,0.8) 0%, transparent 60%);
-      color: var(--cream);
-      font-family: 'Inter', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 36px 16px 48px;
+      color: var(--cream); font-family: 'Inter', sans-serif;
+      display: flex; flex-direction: column; align-items: center; padding: 36px 16px 48px;
     }
-
-    /* ── Header ── */
     .header { text-align: center; margin-bottom: 22px; }
     .header-label { font-size: 9px; letter-spacing: 5px; color: var(--gold); text-transform: uppercase; margin-bottom: 4px; opacity: 0.8; }
-    .header-title { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; letter-spacing: -0.5px; color: var(--cream); line-height: 1; opacity: 0.9; }
+    .header-title { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 400; color: var(--cream); line-height: 1; }
     .header-line { width: 28px; height: 1px; background: var(--gold); margin: 8px auto 0; opacity: 0.6; }
-
-    /* ── Card ── */
     .card {
-      width: 100%; max-width: 420px;
-      background: var(--card-bg);
-      border: 1px solid var(--gold-dim);
-      border-radius: 24px;
-      padding: 24px 20px 20px;
+      width: 100%; max-width: 420px; background: var(--card-bg);
+      border: 1px solid var(--gold-dim); border-radius: 24px; padding: 24px 20px 20px;
       box-shadow: 0 24px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.04);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px); margin-bottom: 0;
     }
-
-    /* ── Status ── */
+    .card + .card { margin-top: 16px; }
     .status {
-      text-align: center; font-size: 10px; letter-spacing: 0.8px;
-      margin-bottom: 18px;
-      display: flex; align-items: center; justify-content: center; gap: 6px;
-      min-height: 18px;
+      text-align: center; font-size: 10px; letter-spacing: 0.8px; margin-bottom: 18px;
+      display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 18px;
     }
-    .status.live    { color: #4ade80; }
-    .status.loading { color: var(--muted); }
-    .status.offline { color: #f97316; }
-    .refresh-btn {
-      background: none; border: none; color: var(--gold);
-      cursor: pointer; font-size: 15px; padding: 2px 4px; border-radius: 4px;
-      transition: opacity 0.2s, transform 0.3s;
-    }
+    .status.live { color: #4ade80; } .status.loading { color: var(--muted); } .status.offline { color: #f97316; }
+    .refresh-btn { background: none; border: none; color: var(--gold); cursor: pointer; font-size: 15px; padding: 2px 4px; border-radius: 4px; transition: opacity 0.2s, transform 0.3s; }
     .refresh-btn:hover { opacity: 0.7; transform: rotate(90deg); }
-
-    /* ── Labels ── */
     .field-label { font-size: 9px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 7px; display: block; opacity: 0.85; }
-
-    /* ── Amount ── */
     .amount-wrap { margin-bottom: 16px; }
     .amount-input-row { position: relative; display: flex; align-items: center; }
     .amount-symbol {
       position: absolute; left: 16px;
-      font-family: 'Cormorant Garamond', serif; font-size: 44px; font-weight: 300;
-      color: var(--gold); pointer-events: none; line-height: 1; letter-spacing: -1px; opacity: 0.85;
+      font-family: 'Playfair Display', serif; font-size: 44px; font-weight: 400;
+      color: var(--gold); pointer-events: none; line-height: 1; opacity: 0.85;
     }
     .amount-input {
-      width: 100%;
-      background: var(--input-bg);
-      border: 1.5px solid rgba(212,168,83,0.28);
-      border-radius: 12px;
-      padding: 14px 16px 14px 40px;
-      font-size: 44px; font-family: 'Cormorant Garamond', serif; font-weight: 300;
-      color: var(--cream); outline: none; letter-spacing: -1px;
-      transition: border-color 0.2s, box-shadow 0.2s;
-      -moz-appearance: textfield; line-height: 1;
+      width: 100%; background: var(--input-bg); border: 1.5px solid rgba(212,168,83,0.28);
+      border-radius: 12px; padding: 14px 16px 14px 44px;
+      font-size: 44px; font-family: 'Playfair Display', serif; font-weight: 400;
+      color: var(--cream); outline: none; line-height: 1;
+      transition: border-color 0.2s, box-shadow 0.2s; -moz-appearance: textfield;
     }
-    .amount-input::-webkit-outer-spin-button,
-    .amount-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+    .amount-input::-webkit-outer-spin-button, .amount-input::-webkit-inner-spin-button { -webkit-appearance: none; }
     .amount-input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(212,168,83,0.1); }
-
-    /* ── Quick buttons ── */
     .quick-btns { display: flex; gap: 6px; margin-top: 10px; }
     .quick-btn {
-      flex: 1; min-width: 0; height: 44px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(212,168,83,0.15);
-      border-radius: 10px; padding: 0 4px;
+      flex: 1; height: 44px; background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(212,168,83,0.15); border-radius: 10px;
       color: var(--muted); font-size: 12px; font-family: 'Inter', sans-serif; font-weight: 500;
-      cursor: pointer; transition: all 0.15s;
-      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: all 0.15s; display: flex; align-items: center; justify-content: center;
     }
     .quick-btn:active { transform: scale(0.95); }
-    .quick-btn:hover  { border-color: rgba(212,168,83,0.4); color: var(--cream); }
+    .quick-btn:hover { border-color: rgba(212,168,83,0.4); color: var(--cream); }
     .quick-btn.active { background: rgba(212,168,83,0.18); border-color: rgba(212,168,83,0.7); color: var(--gold); font-weight: 600; box-shadow: 0 0 10px rgba(212,168,83,0.12); }
-
-    /* ── From select ── */
     .select-wrap { position: relative; margin-bottom: 12px; }
     .select-flag { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); font-size: 20px; pointer-events: none; z-index: 1; }
     .select-chevron { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; color: var(--gold); font-size: 12px; opacity: 0.6; }
     .currency-select {
-      width: 100%; background: var(--input-bg);
-      border: 1px solid rgba(212,168,83,0.28); border-radius: 12px;
-      padding: 14px 40px 14px 50px;
+      width: 100%; background: var(--input-bg); border: 1px solid rgba(212,168,83,0.28);
+      border-radius: 12px; padding: 14px 40px 14px 50px;
       font-size: 14px; font-family: 'Inter', sans-serif; color: var(--cream);
-      outline: none; appearance: none; cursor: pointer;
-      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none; appearance: none; cursor: pointer; transition: border-color 0.2s, box-shadow 0.2s;
     }
     .currency-select:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(212,168,83,0.1); }
-
-    /* ── Swap ── */
     .swap-wrap { display: flex; justify-content: center; margin: 10px 0; }
     .swap-btn {
       background: linear-gradient(135deg, rgba(212,168,83,0.15), rgba(212,168,83,0.06));
       border: 1px solid rgba(212,168,83,0.4); border-radius: 50%;
-      width: 48px; height: 48px; color: var(--gold); font-size: 22px;
+      width: 48px; height: 48px; color: var(--gold);
       cursor: pointer; display: flex; align-items: center; justify-content: center;
-      transition: all 0.3s; box-shadow: 0 0 16px rgba(212,168,83,0.1);
+      transition: all 0.3s; box-shadow: 0 0 16px rgba(212,168,83,0.1); padding: 0;
     }
     .swap-btn:hover { background: linear-gradient(135deg, rgba(212,168,83,0.28), rgba(212,168,83,0.12)); box-shadow: 0 0 24px rgba(212,168,83,0.22); transform: rotate(180deg); }
     .swap-btn:active { transform: rotate(180deg) scale(0.93); }
-
-    /* ── Results section ── */
-    .results-section { margin-top: 16px; }
-
-    /* Layout toggle */
-    .results-header {
-      display: flex; align-items: center; justify-content: space-between;
-      margin-bottom: 10px;
-    }
+    .results-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
     .results-label { font-size: 9px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; opacity: 0.85; }
     .layout-toggle { display: flex; gap: 6px; }
-    .layout-btn {
-      background: rgba(255,255,255,0.04); border: 1px solid rgba(212,168,83,0.15);
-      border-radius: 8px; padding: 6px 10px; color: var(--muted);
-      font-size: 14px; cursor: pointer; transition: all 0.15s; line-height: 1;
-    }
+    .layout-btn { background: rgba(255,255,255,0.04); border: 1px solid rgba(212,168,83,0.15); border-radius: 8px; padding: 6px 10px; color: var(--muted); font-size: 14px; cursor: pointer; transition: all 0.15s; line-height: 1; }
     .layout-btn.active { background: rgba(212,168,83,0.15); border-color: rgba(212,168,83,0.6); color: var(--gold); }
-    .layout-btn:active { transform: scale(0.95); }
-
-    /* Result grid */
     .result-grid { display: grid; gap: 10px; grid-template-columns: 1fr; }
     .result-grid.two-col { grid-template-columns: 1fr 1fr; }
-
-    /* Result card */
     .result-card {
       background: var(--gold-glow); border: 1px solid rgba(212,168,83,0.18);
       border-radius: 16px; padding: 16px 12px 14px; text-align: center;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
-      min-height: 100px; position: relative; transition: opacity 0.2s;
-      animation: fadeUp 0.25s ease;
+      min-height: 100px; position: relative; animation: fadeUp 0.25s ease;
     }
     .result-card-flag { font-size: 24px; margin-bottom: 4px; }
     .result-card-equation { font-size: 10px; color: rgba(212,168,83,0.5); letter-spacing: 0.5px; margin-bottom: 2px; }
-    .result-card-amount {
-      font-family: 'Cormorant Garamond', serif; font-weight: 300;
-      color: var(--gold); letter-spacing: -1px; line-height: 1;
-    }
+    .result-card-amount { font-family: 'Playfair Display', serif; font-weight: 400; color: var(--gold); letter-spacing: -0.5px; line-height: 1; }
     .result-grid.one-col .result-card-amount { font-size: 44px; }
     .result-grid.two-col .result-card-amount { font-size: 28px; }
-    .result-card-name { font-size: 10px; color: var(--muted); margin-top: 4px; letter-spacing: 0.3px; }
-    .result-card-updated { font-size: 9px; color: rgba(107,114,128,0.5); margin-top: 3px; }
-    .result-card-remove {
-      position: absolute; top: 7px; right: 9px;
-      background: none; border: none; color: rgba(212,168,83,0.25);
-      font-size: 15px; cursor: pointer; line-height: 1; padding: 2px;
-      transition: color 0.15s;
-    }
+    .result-card-name { font-size: 10px; color: var(--muted); margin-top: 6px; letter-spacing: 0.3px; }
+    .result-card-remove { position: absolute; top: 7px; right: 9px; background: none; border: none; color: rgba(212,168,83,0.25); font-size: 15px; cursor: pointer; line-height: 1; padding: 2px; transition: color 0.15s; }
     .result-card-remove:hover { color: rgba(212,168,83,0.8); }
-
-    /* Add target row */
     .add-target-row { display: flex; gap: 8px; margin-top: 12px; align-items: center; }
     .add-target-wrap { flex: 1; position: relative; }
-    .add-target-select {
-      width: 100%; background: var(--input-bg);
-      border: 1px solid rgba(212,168,83,0.2); border-radius: 10px;
-      padding: 11px 32px 11px 14px; font-size: 13px; font-family: 'Inter', sans-serif;
-      color: var(--cream); outline: none; appearance: none; cursor: pointer;
-    }
+    .add-target-select { width: 100%; background: var(--input-bg); border: 1px solid rgba(212,168,83,0.2); border-radius: 10px; padding: 11px 32px 11px 14px; font-size: 13px; font-family: 'Inter', sans-serif; color: var(--cream); outline: none; appearance: none; cursor: pointer; }
     .add-target-chevron { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: var(--gold); font-size: 11px; opacity: 0.5; pointer-events: none; }
-    .add-target-btn {
-      background: rgba(212,168,83,0.12); border: 1px solid rgba(212,168,83,0.35);
-      border-radius: 10px; padding: 11px 14px; color: var(--gold);
-      font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap;
-      transition: all 0.15s; font-family: 'Inter', sans-serif;
-    }
+    .add-target-btn { background: rgba(212,168,83,0.12); border: 1px solid rgba(212,168,83,0.35); border-radius: 10px; padding: 11px 14px; color: var(--gold); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; transition: all 0.15s; font-family: 'Inter', sans-serif; }
     .add-target-btn:hover { background: rgba(212,168,83,0.22); }
-    .add-target-btn:active { transform: scale(0.97); }
-
     .result-placeholder { color: var(--muted); font-size: 13px; text-align: center; padding: 24px; grid-column: 1 / -1; }
-
-    /* ── Offline banner ── */
-    .offline-banner {
-      background: rgba(249,115,22,0.08); border: 1px solid rgba(249,115,22,0.25);
-      border-radius: 8px; padding: 7px 12px; font-size: 11px; color: #f97316;
-      text-align: center; margin-bottom: 14px; display: none;
-    }
+    .offline-banner { background: rgba(249,115,22,0.08); border: 1px solid rgba(249,115,22,0.25); border-radius: 8px; padding: 7px 12px; font-size: 11px; color: #f97316; text-align: center; margin-bottom: 14px; display: none; }
     .offline-banner.visible { display: block; }
-
-    /* ── Footer ── */
     .footer { margin-top: 20px; font-size: 10px; color: #1f2937; letter-spacing: 1px; text-align: center; }
-
     @keyframes spin { to { transform: rotate(360deg); } }
     .spinning { display: inline-block; animation: spin 1s linear infinite; }
     @keyframes fadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
@@ -226,114 +129,122 @@
 </head>
 <body>
 
-  <div class="header">
-    <div class="header-label">Wisselkoers</div>
-    <div class="header-title">Valuta</div>
-    <div class="header-line"></div>
-  </div>
+<div class="header">
+  <div class="header-label">Wisselkoers</div>
+  <div class="header-title">Valuta</div>
+  <div class="header-line"></div>
+</div>
 
-  <div class="card">
-    <div class="status loading" id="status">
-      <span class="spinning">⏳</span> Live koersen ophalen...
+<div class="card">
+  <div class="status loading" id="status"><span class="spinning">⏳</span> Live koersen ophalen...</div>
+  <div class="offline-banner" id="offlineBanner">⚠ Geen internet — laatste opgeslagen koersen worden gebruikt</div>
+
+  <div class="amount-wrap">
+    <label class="field-label">Bedrag</label>
+    <div class="amount-input-row">
+      <span class="amount-symbol" id="amountSymbol">$</span>
+      <input class="amount-input" type="number" id="amountInput" value="1" min="0" inputmode="decimal" />
     </div>
-
-    <div class="offline-banner" id="offlineBanner">
-      ⚠ Geen internet — laatste opgeslagen koersen worden gebruikt
-    </div>
-
-    <!-- Amount -->
-    <div class="amount-wrap">
-      <label class="field-label">Bedrag</label>
-      <div class="amount-input-row">
-        <span class="amount-symbol" id="amountSymbol">$</span>
-        <input class="amount-input" type="number" id="amountInput" value="1" min="0" inputmode="decimal" />
-      </div>
-      <div class="quick-btns">
-        <button class="quick-btn active" data-val="1">$1</button>
-        <button class="quick-btn" data-val="5">$5</button>
-        <button class="quick-btn" data-val="10">$10</button>
-        <button class="quick-btn" data-val="25">$25</button>
-        <button class="quick-btn" data-val="50">$50</button>
-        <button class="quick-btn" data-val="100">$100</button>
-      </div>
-    </div>
-
-    <!-- From -->
-    <label class="field-label">Van</label>
-    <div class="select-wrap">
-      <div class="select-flag" id="fromFlag">🇺🇸</div>
-      <div class="select-chevron">›</div>
-      <select class="currency-select" id="fromSelect"></select>
-    </div>
-
-    <!-- Swap -->
-    <div class="swap-wrap">
-      <button class="swap-btn" id="swapBtn" title="Wissel met eerste resultaat">⇅</button>
-    </div>
-
-    <!-- Results -->
-    <div class="results-section">
-      <div class="results-header">
-        <span class="results-label">Naar</span>
-        <div class="layout-toggle">
-          <button class="layout-btn active" id="btnOne" title="Één kolom">▭</button>
-          <button class="layout-btn" id="btnTwo" title="Twee kolommen">▫▫</button>
-        </div>
-      </div>
-
-      <div class="result-grid one-col" id="resultGrid"></div>
-
-      <div class="add-target-row">
-        <div class="add-target-wrap">
-          <select class="add-target-select" id="addTargetSelect"></select>
-          <span class="add-target-chevron">›</span>
-        </div>
-        <button class="add-target-btn" id="addTargetBtn">+ Voeg toe</button>
-      </div>
+    <div class="quick-btns">
+      <button class="quick-btn active" data-val="1">$1</button>
+      <button class="quick-btn" data-val="5">$5</button>
+      <button class="quick-btn" data-val="10">$10</button>
+      <button class="quick-btn" data-val="25">$25</button>
+      <button class="quick-btn" data-val="50">$50</button>
+      <button class="quick-btn" data-val="100">$100</button>
     </div>
   </div>
 
-  <div class="footer">Live koersen · ECB data</div>
+  <label class="field-label">Van</label>
+  <div class="select-wrap">
+    <div class="select-flag" id="fromFlag">🇺🇸</div>
+    <div class="select-chevron">›</div>
+    <select class="currency-select" id="fromSelect"></select>
+  </div>
+
+  <div class="swap-wrap">
+    <button class="swap-btn" id="swapBtn">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M6 3v14M6 3L3 6M6 3l3 3" stroke="#d4a853" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14 17V3M14 17l-3-3M14 17l3-3" stroke="#d4a853" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="results-header">
+    <span class="results-label">Naar</span>
+    <div class="layout-toggle">
+      <button class="layout-btn active" id="btnOne">▭</button>
+      <button class="layout-btn" id="btnTwo">▫▫</button>
+    </div>
+  </div>
+  <div class="result-grid one-col" id="resultGrid"></div>
+  <div class="add-target-row">
+    <div class="add-target-wrap">
+      <select class="add-target-select" id="addTargetSelect"></select>
+      <span class="add-target-chevron">›</span>
+    </div>
+    <button class="add-target-btn" id="addTargetBtn">+ Voeg toe</button>
+  </div>
+</div>
+
+<!-- Chart card -->
+<div class="card">
+  <div class="results-header" style="margin-bottom:14px;">
+    <span class="results-label">Koersverloop 30 dagen</span>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <select id="chartFrom" class="add-target-select" style="max-width:88px;padding:6px 24px 6px 8px;font-size:11px;"></select>
+      <span style="color:var(--muted);font-size:11px;">/</span>
+      <select id="chartTo" class="add-target-select" style="max-width:88px;padding:6px 24px 6px 8px;font-size:11px;"></select>
+    </div>
+  </div>
+  <div id="chartStatus" style="text-align:center;font-size:11px;color:var(--muted);min-height:16px;margin-bottom:8px;"></div>
+  <canvas id="rateChart" style="width:100%;display:block;"></canvas>
+  <div id="chartMeta" style="display:flex;justify-content:space-between;margin-top:10px;font-size:10px;color:#4b5563;"></div>
+</div>
+
+<div class="footer">Live koersen · ECB data</div>
 
 <script>
 const currencies = [
-  { code: "USD", name: "US Dollar",           symbol: "$",   flag: "🇺🇸" },
-  { code: "EUR", name: "Euro",                symbol: "€",   flag: "🇪🇺" },
-  { code: "GBP", name: "Brits Pond",          symbol: "£",   flag: "🇬🇧" },
-  { code: "JPY", name: "Japanse Yen",         symbol: "¥",   flag: "🇯🇵" },
-  { code: "CAD", name: "Canadese Dollar",     symbol: "$",   flag: "🇨🇦" },
-  { code: "AUD", name: "Australische Dollar", symbol: "$",   flag: "🇦🇺" },
-  { code: "CHF", name: "Zwitserse Frank",     symbol: "Fr",  flag: "🇨🇭" },
-  { code: "CNY", name: "Chinese Yuan",        symbol: "¥",   flag: "🇨🇳" },
-  { code: "INR", name: "Indiase Roepie",      symbol: "₹",   flag: "🇮🇳" },
-  { code: "MXN", name: "Mexicaanse Peso",     symbol: "$",   flag: "🇲🇽" },
-  { code: "BRL", name: "Braziliaanse Real",   symbol: "R$",  flag: "🇧🇷" },
-  { code: "KRW", name: "Zuid-Koreaanse Won",  symbol: "₩",   flag: "🇰🇷" },
-  { code: "SGD", name: "Singaporese Dollar",  symbol: "$",   flag: "🇸🇬" },
-  { code: "AED", name: "VAE Dirham",          symbol: "د.إ", flag: "🇦🇪" },
-  { code: "ZAR", name: "Zuid-Afrikaanse Rand",symbol: "R",   flag: "🇿🇦" },
-  { code: "TRY", name: "Turkse Lira",         symbol: "₺",   flag: "🇹🇷" },
-  { code: "NOK", name: "Noorse Kroon",        symbol: "kr",  flag: "🇳🇴" },
-  { code: "SEK", name: "Zweedse Kroon",       symbol: "kr",  flag: "🇸🇪" },
-  { code: "DKK", name: "Deense Kroon",        symbol: "kr",  flag: "🇩🇰" },
-  { code: "PLN", name: "Poolse Zloty",        symbol: "zł",  flag: "🇵🇱" },
-  { code: "THB", name: "Thaise Baht",         symbol: "฿",   flag: "🇹🇭" },
-  { code: "HKD", name: "Hongkong Dollar",     symbol: "$",   flag: "🇭🇰" },
-  { code: "NZD", name: "Nieuw-Zeelandse Dollar", symbol: "$", flag: "🇳🇿" },
+  { code:"USD", name:"US Dollar",            symbol:"$",    flag:"🇺🇸" },
+  { code:"EUR", name:"Euro",                 symbol:"€",    flag:"🇪🇺" },
+  { code:"GBP", name:"Brits Pond",           symbol:"£",    flag:"🇬🇧" },
+  { code:"JPY", name:"Japanse Yen",          symbol:"¥",    flag:"🇯🇵" },
+  { code:"CAD", name:"Canadese Dollar",      symbol:"CA$",  flag:"🇨🇦" },
+  { code:"AUD", name:"Australische Dollar",  symbol:"A$",   flag:"🇦🇺" },
+  { code:"CHF", name:"Zwitserse Frank",      symbol:"Fr",   flag:"🇨🇭" },
+  { code:"CNY", name:"Chinese Yuan",         symbol:"¥",    flag:"🇨🇳" },
+  { code:"INR", name:"Indiase Roepie",       symbol:"₹",    flag:"🇮🇳" },
+  { code:"MXN", name:"Mexicaanse Peso",      symbol:"MX$",  flag:"🇲🇽" },
+  { code:"BRL", name:"Braziliaanse Real",    symbol:"R$",   flag:"🇧🇷" },
+  { code:"KRW", name:"Zuid-Koreaanse Won",   symbol:"₩",    flag:"🇰🇷" },
+  { code:"SGD", name:"Singaporese Dollar",   symbol:"S$",   flag:"🇸🇬" },
+  { code:"AED", name:"VAE Dirham",           symbol:"د.إ",  flag:"🇦🇪" },
+  { code:"ZAR", name:"Zuid-Afrikaanse Rand", symbol:"R",    flag:"🇿🇦" },
+  { code:"TRY", name:"Turkse Lira",          symbol:"₺",    flag:"🇹🇷" },
+  { code:"NOK", name:"Noorse Kroon",         symbol:"kr",   flag:"🇳🇴" },
+  { code:"SEK", name:"Zweedse Kroon",        symbol:"kr",   flag:"🇸🇪" },
+  { code:"DKK", name:"Deense Kroon",         symbol:"kr",   flag:"🇩🇰" },
+  { code:"PLN", name:"Poolse Zloty",         symbol:"zł",   flag:"🇵🇱" },
+  { code:"THB", name:"Thaise Baht",          symbol:"฿",    flag:"🇹🇭" },
+  { code:"HKD", name:"Hongkong Dollar",      symbol:"HK$",  flag:"🇭🇰" },
+  { code:"NZD", name:"Nieuw-Zeelandse Dollar",symbol:"NZ$", flag:"🇳🇿" },
 ];
 
-// ── State ──
+// ── Config ──
 const CACHE_TTL    = 8 * 60 * 60 * 1000;
-const CACHE_PREFIX = "valuta_pair_v3_";
-const STORE_KEY    = "valuta_state_v3";
+const CACHE_PREFIX = "valuta_v4_";
+const STORE_KEY    = "valuta_state_v4";
 
-let fromCode     = "USD";
-let targetCodes  = ["EUR", "GBP"]; // default targets
-let ratesCache   = {};              // key "USD_EUR" → rate number
-let loadingSet   = new Set();
-let layoutCols   = 1;
+// ── State ──
+let fromCode    = "USD";
+let targetCodes = ["EUR", "GBP"];
+let ratesCache  = {};
+let loadingSet  = new Set();
+let layoutCols  = 1;
 
-// ── DOM refs ──
+// ── DOM ──
 const statusEl        = document.getElementById("status");
 const offlineBanner   = document.getElementById("offlineBanner");
 const amountInput     = document.getElementById("amountInput");
@@ -348,7 +259,7 @@ const btnTwo          = document.getElementById("btnTwo");
 const amountSymbol    = document.getElementById("amountSymbol");
 const quickBtns       = document.querySelectorAll(".quick-btn");
 
-// ── Persist state ──
+// ── State persistence ──
 function saveState() {
   try { localStorage.setItem(STORE_KEY, JSON.stringify({ fromCode, targetCodes, layoutCols })); } catch {}
 }
@@ -359,89 +270,84 @@ function loadState() {
   } catch {}
 }
 
-// ── Cache ──
-function cacheKey(f, t) { return CACHE_PREFIX + f + "_" + t; }
+// ── Cache helpers ──
+function cKey(f, t) { return CACHE_PREFIX + f + "_" + t; }
 function getCached(f, t) {
-  try {
-    const raw = localStorage.getItem(cacheKey(f, t));
-    if (!raw) return null;
-    const { rate, ts } = JSON.parse(raw);
-    return Date.now() - ts > CACHE_TTL ? null : rate;
-  } catch { return null; }
+  try { const { rate, ts } = JSON.parse(localStorage.getItem(cKey(f,t))); return Date.now()-ts > CACHE_TTL ? null : rate; } catch { return null; }
 }
 function setCache(f, t, rate) {
-  try { localStorage.setItem(cacheKey(f, t), JSON.stringify({ rate, ts: Date.now() })); } catch {}
+  try { localStorage.setItem(cKey(f,t), JSON.stringify({ rate, ts: Date.now() })); } catch {}
 }
-function getStaleCached(f, t) {
-  try { const { rate, ts } = JSON.parse(localStorage.getItem(cacheKey(f, t))); return { rate, ts }; } catch { return null; }
+function getStale(f, t) {
+  try { return JSON.parse(localStorage.getItem(cKey(f,t))); } catch { return null; }
+}
+
+// ── Option label: symbol first, then name ──
+function optLabel(c) {
+  return `${c.symbol} — ${c.name}`;
 }
 
 // ── Build selects ──
 function buildFromSelect() {
-  fromSelect.innerHTML = currencies.map(c =>
-    `<option value="${c.code}">${c.flag} ${c.code} — ${c.name}</option>`
-  ).join("");
+  fromSelect.innerHTML = currencies.map(c => `<option value="${c.code}">${optLabel(c)}</option>`).join("");
   fromSelect.value = fromCode;
 }
-
 function buildAddSelect() {
   const used = new Set([fromCode, ...targetCodes]);
-  const available = currencies.filter(c => !used.has(c.code));
-  addTargetSelect.innerHTML = available.map(c =>
-    `<option value="${c.code}">${c.flag} ${c.code} — ${c.name}</option>`
-  ).join("");
-  addTargetBtn.disabled = available.length === 0;
+  const avail = currencies.filter(c => !used.has(c.code));
+  addTargetSelect.innerHTML = avail.map(c => `<option value="${c.code}">${optLabel(c)}</option>`).join("");
+  addTargetBtn.disabled = avail.length === 0;
 }
 
 // ── Symbol & quick buttons ──
 function updateSymbol() {
-  const sym = currencies.find(c => c.code === fromCode)?.symbol || "";
-  amountSymbol.textContent = sym;
-  amountInput.style.paddingLeft = (amountSymbol.offsetWidth + 20) + "px";
+  const c = currencies.find(c => c.code === fromCode);
+  amountSymbol.textContent = c?.symbol || "";
+  requestAnimationFrame(() => {
+    amountInput.style.paddingLeft = (amountSymbol.offsetWidth + 20) + "px";
+  });
 }
 function updateQuickBtns() {
   const sym = currencies.find(c => c.code === fromCode)?.symbol || "";
   quickBtns.forEach(btn => {
-    const v = btn.dataset.val;
-    btn.textContent = sym + v;
-    btn.classList.toggle("active", parseFloat(amountInput.value) === parseFloat(v));
+    btn.textContent = sym + btn.dataset.val;
+    btn.classList.toggle("active", parseFloat(amountInput.value) === parseFloat(btn.dataset.val));
   });
 }
 
-// ── Render cards ──
+// ── Render result cards ──
 function renderCards() {
-  const num = parseFloat(amountInput.value);
+  const num  = parseFloat(amountInput.value);
   const from = currencies.find(c => c.code === fromCode);
-  const now = new Date().toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit" });
   resultGrid.innerHTML = "";
 
   if (targetCodes.length === 0) {
-    resultGrid.innerHTML = `<div class="result-placeholder">Kies een valuta hieronder en tik "+ Voeg toe"</div>`;
+    resultGrid.innerHTML = `<div class="result-placeholder">Kies een valuta hieronder</div>`;
     return;
   }
 
   targetCodes.forEach(tc => {
-    const to  = currencies.find(c => c.code === tc);
-    const key = fromCode + "_" + tc;
+    const to      = currencies.find(c => c.code === tc);
+    const key     = fromCode + "_" + tc;
     const loading = loadingSet.has(key);
-    const rate = ratesCache[key] ?? null;
-    const card = document.createElement("div");
+    const rate    = ratesCache[key] ?? null;
+    const card    = document.createElement("div");
     card.className = "result-card";
 
     let inner = `<div class="result-card-flag">${to.flag}</div>`;
+
     if (loading) {
       inner += `<div class="result-card-amount" style="font-size:20px;opacity:0.35">···</div>`;
     } else if (rate === null || isNaN(num) || num < 0 || amountInput.value === "") {
       inner += `<div class="result-card-amount" style="font-size:20px;opacity:0.3">—</div>`;
     } else {
       const result = num * rate;
-      inner += `
-        <div class="result-card-equation">${from.symbol}${num} =</div>
-        <div class="result-card-amount">${to.symbol}${result.toLocaleString("nl-NL", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
-        <div class="result-card-updated">${now}</div>`;
+      inner += `<div class="result-card-equation">${from.symbol}${num} =</div>
+        <div class="result-card-amount">${to.symbol}${result.toLocaleString("nl-NL", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>`;
     }
+
     inner += `<div class="result-card-name">${to.code}</div>`;
-    inner += `<button class="result-card-remove" data-tc="${tc}" title="Verwijder">×</button>`;
+    inner += `<button class="result-card-remove" data-tc="${tc}">×</button>`;
     card.innerHTML = inner;
     resultGrid.appendChild(card);
   });
@@ -449,56 +355,30 @@ function renderCards() {
   resultGrid.querySelectorAll(".result-card-remove").forEach(btn => {
     btn.addEventListener("click", () => {
       targetCodes = targetCodes.filter(c => c !== btn.dataset.tc);
-      saveState();
-      buildAddSelect();
-      renderCards();
+      saveState(); buildAddSelect(); renderCards();
     });
   });
 }
 
-// ── Fetch one rate ──
+// ── Fetch one pair ──
 async function fetchRate(tc, force = false) {
   const key = fromCode + "_" + tc;
-
   if (!force) {
     const cached = getCached(fromCode, tc);
     if (cached !== null) { ratesCache[key] = cached; renderCards(); return; }
   }
-
-  loadingSet.add(key);
-  renderCards();
-
+  loadingSet.add(key); renderCards();
   const f = fromCode.toLowerCase(), t = tc.toLowerCase();
   const sources = [
-    async () => {
-      const r = await fetch(`https://api.frankfurter.dev/v2/rate/${fromCode}/${tc}`);
-      if (!r.ok) throw 0; const d = await r.json();
-      if (!d.rate) throw 0; return d.rate;
-    },
-    async () => {
-      const r = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${f}.json`);
-      if (!r.ok) throw 0; const d = await r.json();
-      const rate = d[f]?.[t]; if (!rate) throw 0; return rate;
-    },
-    async () => {
-      const r = await fetch(`https://latest.currency-api.pages.dev/v1/currencies/${f}.json`);
-      if (!r.ok) throw 0; const d = await r.json();
-      const rate = d[f]?.[t]; if (!rate) throw 0; return rate;
-    }
+    async () => { const r = await fetch(`https://api.frankfurter.app/latest?base=${fromCode}&symbols=${tc}`); if (!r.ok) throw 0; const d = await r.json(); const v = d.rates[tc]; if (!v) throw 0; return v; },
+    async () => { const r = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${f}.json`); if (!r.ok) throw 0; const d = await r.json(); const v = d[f]?.[t]; if (!v) throw 0; return v; },
+    async () => { const r = await fetch(`https://latest.currency-api.pages.dev/v1/currencies/${f}.json`); if (!r.ok) throw 0; const d = await r.json(); const v = d[f]?.[t]; if (!v) throw 0; return v; },
   ];
-
   let rate = null;
   for (const src of sources) { try { rate = await src(); break; } catch {} }
-
   loadingSet.delete(key);
-  if (rate !== null) {
-    ratesCache[key] = rate;
-    setCache(fromCode, tc, rate);
-  } else {
-    const stale = getStaleCached(fromCode, tc);
-    ratesCache[key] = stale ? stale.rate : null;
-    offlineBanner.classList.add("visible");
-  }
+  if (rate !== null) { ratesCache[key] = rate; setCache(fromCode, tc, rate); }
+  else { const s = getStale(fromCode, tc); ratesCache[key] = s ? s.rate : null; offlineBanner.classList.add("visible"); }
   renderCards();
 }
 
@@ -507,16 +387,15 @@ async function fetchAll(force = false) {
   setStatus("loading", `<span class="spinning">⏳</span> Koersen ophalen...`);
   offlineBanner.classList.remove("visible");
   await Promise.all(targetCodes.map(tc => fetchRate(tc, force)));
-  const now = new Date().toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit" });
+  const now = new Date().toLocaleTimeString("nl-NL", { hour:"2-digit", minute:"2-digit" });
   setStatus("live", `● Live · ${now}`, true);
 }
 
 // ── Status ──
-function setStatus(type, html, showRefresh = false) {
+function setStatus(type, html, refresh = false) {
   statusEl.className = `status ${type}`;
-  statusEl.innerHTML = html + (showRefresh
-    ? ` <button class="refresh-btn" id="refreshBtn">↻</button>` : "");
-  if (showRefresh) document.getElementById("refreshBtn").addEventListener("click", () => fetchAll(true));
+  statusEl.innerHTML = html + (refresh ? ` <button class="refresh-btn" id="refreshBtn">↻</button>` : "");
+  if (refresh) document.getElementById("refreshBtn").addEventListener("click", () => fetchAll(true));
 }
 
 // ── Layout ──
@@ -528,39 +407,125 @@ function applyLayout() {
 
 // ── Events ──
 amountInput.addEventListener("input", () => { updateQuickBtns(); renderCards(); });
-
-quickBtns.forEach(btn => btn.addEventListener("click", () => {
-  amountInput.value = btn.dataset.val;
-  updateQuickBtns(); renderCards();
-}));
-
+quickBtns.forEach(btn => btn.addEventListener("click", () => { amountInput.value = btn.dataset.val; updateQuickBtns(); renderCards(); }));
 fromSelect.addEventListener("change", () => {
-  fromCode = fromSelect.value;
-  fromFlagEl.textContent = currencies.find(c => c.code === fromCode)?.flag || "";
-  ratesCache = {};
-  saveState(); buildAddSelect(); updateSymbol(); updateQuickBtns(); fetchAll();
+  fromCode = fromSelect.value; fromFlagEl.textContent = currencies.find(c=>c.code===fromCode)?.flag||"";
+  ratesCache={}; saveState(); buildAddSelect(); updateSymbol(); updateQuickBtns(); fetchAll();
 });
-
 swapBtn.addEventListener("click", () => {
-  if (targetCodes.length === 0) return;
-  const newFrom = targetCodes[0];
-  targetCodes[0] = fromCode;
-  fromCode = newFrom;
-  fromSelect.value = fromCode;
-  fromFlagEl.textContent = currencies.find(c => c.code === fromCode)?.flag || "";
-  ratesCache = {};
-  saveState(); buildFromSelect(); buildAddSelect(); updateSymbol(); updateQuickBtns(); fetchAll();
+  if (!targetCodes.length) return;
+  const newFrom = targetCodes[0]; targetCodes[0] = fromCode; fromCode = newFrom;
+  fromSelect.value = fromCode; fromFlagEl.textContent = currencies.find(c=>c.code===fromCode)?.flag||"";
+  ratesCache={}; saveState(); buildFromSelect(); buildAddSelect(); updateSymbol(); updateQuickBtns(); fetchAll();
 });
-
-btnOne.addEventListener("click", () => { layoutCols = 1; applyLayout(); saveState(); });
-btnTwo.addEventListener("click", () => { layoutCols = 2; applyLayout(); saveState(); });
-
+btnOne.addEventListener("click", () => { layoutCols=1; applyLayout(); saveState(); renderCards(); });
+btnTwo.addEventListener("click", () => { layoutCols=2; applyLayout(); saveState(); renderCards(); });
 addTargetBtn.addEventListener("click", () => {
   const code = addTargetSelect.value;
-  if (!code || targetCodes.includes(code) || code === fromCode) return;
-  targetCodes.push(code);
-  saveState(); buildAddSelect(); fetchRate(code);
+  if (!code || targetCodes.includes(code) || code===fromCode) return;
+  targetCodes.push(code); saveState(); buildAddSelect(); fetchRate(code);
 });
+
+// ── Chart ──
+const chartFromSel = document.getElementById("chartFrom");
+const chartToSel   = document.getElementById("chartTo");
+const chartCanvas  = document.getElementById("rateChart");
+const chartStatus  = document.getElementById("chartStatus");
+const chartMeta    = document.getElementById("chartMeta");
+const ctx          = chartCanvas.getContext("2d");
+let chartHistory   = [];
+
+function buildChartSelects() {
+  const opts = currencies.map(c => `<option value="${c.code}">${c.symbol} ${c.code}</option>`).join("");
+  chartFromSel.innerHTML = opts; chartToSel.innerHTML = opts;
+  chartFromSel.value = fromCode;
+  chartToSel.value = targetCodes[0] || "EUR";
+}
+
+async function fetchChartData() {
+  const f = chartFromSel.value, t = chartToSel.value;
+  if (f === t) { chartStatus.textContent = "Kies twee verschillende valuta"; return; }
+  chartStatus.textContent = "⏳ Historische data ophalen...";
+  chartMeta.innerHTML = ""; ctx.clearRect(0, 0, chartCanvas.width, chartCanvas.height);
+  try {
+    const end   = new Date(); end.setDate(end.getDate()-1);
+    const start = new Date(end); start.setDate(start.getDate()-29);
+    const fmt   = d => d.toISOString().split("T")[0];
+    const url   = `https://api.frankfurter.app/${fmt(start)}..${fmt(end)}?base=${f}&symbols=${t}`;
+    const res   = await fetch(url);
+    if (!res.ok) throw new Error("fout");
+    const data  = await res.json();
+    const entries = Object.entries(data.rates).sort(([a],[b])=>a.localeCompare(b));
+    chartHistory  = entries.map(([date, vals]) => ({ date, rate: vals[t] }));
+    if (!chartHistory.length) throw new Error("geen data");
+    chartStatus.textContent = "";
+    drawChart(f, t);
+  } catch(e) {
+    chartStatus.textContent = "⚠ Kon historische data niet laden";
+  }
+}
+
+function drawChart(f, t) {
+  if (!chartHistory.length) return;
+  const dpr = window.devicePixelRatio || 1;
+  const W = chartCanvas.parentElement.offsetWidth - 40;
+  const H = 160;
+  chartCanvas.width  = W * dpr; chartCanvas.height = H * dpr;
+  chartCanvas.style.width = W+"px"; chartCanvas.style.height = H+"px";
+  ctx.scale(dpr, dpr);
+  const rates = chartHistory.map(d=>d.rate);
+  const minR = Math.min(...rates), maxR = Math.max(...rates), range = maxR-minR||0.0001;
+  const pad = { top:20, right:16, bottom:28, left:52 };
+  const cW = W-pad.left-pad.right, cH = H-pad.top-pad.bottom;
+  const xOf = i => pad.left + (i/(chartHistory.length-1))*cW;
+  const yOf = r => pad.top + cH - ((r-minR)/range)*cH;
+
+  // Grid
+  [0,0.25,0.5,0.75,1].forEach(frac => {
+    const y = pad.top + cH*(1-frac);
+    ctx.strokeStyle="rgba(212,168,83,0.08)"; ctx.lineWidth=1;
+    ctx.beginPath(); ctx.moveTo(pad.left,y); ctx.lineTo(pad.left+cW,y); ctx.stroke();
+    ctx.fillStyle="rgba(107,114,128,0.7)"; ctx.font="9px Inter,sans-serif"; ctx.textAlign="right";
+    ctx.fillText((minR+frac*range).toFixed(4), pad.left-4, y+3);
+  });
+
+  // Gradient fill
+  const grad = ctx.createLinearGradient(0,pad.top,0,pad.top+cH);
+  grad.addColorStop(0,"rgba(212,168,83,0.22)"); grad.addColorStop(1,"rgba(212,168,83,0)");
+  ctx.beginPath();
+  chartHistory.forEach((d,i) => i===0 ? ctx.moveTo(xOf(i),yOf(d.rate)) : ctx.lineTo(xOf(i),yOf(d.rate)));
+  ctx.lineTo(xOf(chartHistory.length-1),pad.top+cH); ctx.lineTo(xOf(0),pad.top+cH); ctx.closePath();
+  ctx.fillStyle=grad; ctx.fill();
+
+  // Line
+  ctx.beginPath(); ctx.strokeStyle="#d4a853"; ctx.lineWidth=2; ctx.lineJoin="round";
+  chartHistory.forEach((d,i) => i===0 ? ctx.moveTo(xOf(i),yOf(d.rate)) : ctx.lineTo(xOf(i),yOf(d.rate)));
+  ctx.stroke();
+
+  // End dots
+  [[0,chartHistory[0]],[chartHistory.length-1,chartHistory[chartHistory.length-1]]].forEach(([i,d]) => {
+    ctx.beginPath(); ctx.arc(xOf(i),yOf(d.rate),4,0,Math.PI*2); ctx.fillStyle="#d4a853"; ctx.fill();
+  });
+
+  // X labels
+  ctx.fillStyle="rgba(107,114,128,0.7)"; ctx.font="9px Inter,sans-serif"; ctx.textAlign="center";
+  [0, Math.floor(chartHistory.length/2), chartHistory.length-1].forEach(i => {
+    ctx.fillText(chartHistory[i].date.slice(5), xOf(i), H-6);
+  });
+
+  // Meta
+  const first=rates[0], last=rates[rates.length-1];
+  const change=((last-first)/first*100).toFixed(2);
+  const toCurr = currencies.find(c=>c.code===t);
+  chartMeta.innerHTML = `
+    <span style="color:#4ade80">▲ ${maxR.toFixed(4)}</span>
+    <span style="color:var(--gold)">${change>=0?"+":""}${change}% (30d)</span>
+    <span style="color:#f97316">▼ ${minR.toFixed(4)}</span>`;
+}
+
+chartFromSel.addEventListener("change", fetchChartData);
+chartToSel.addEventListener("change", fetchChartData);
+window.addEventListener("resize", () => { if (chartHistory.length) drawChart(chartFromSel.value, chartToSel.value); });
 
 // ── Init ──
 loadState();
@@ -571,6 +536,8 @@ updateSymbol();
 updateQuickBtns();
 renderCards();
 fetchAll();
+buildChartSelects();
+setTimeout(fetchChartData, 600);
 window.addEventListener("load", updateSymbol);
 </script>
 </body>
