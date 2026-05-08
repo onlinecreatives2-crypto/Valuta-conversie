@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>API Test</title>
+<style>
+body{font-family:monospace;padding:20px;background:#111;color:#eee;font-size:13px;}
+.ok{color:#4ade80} .err{color:#f97316}
+</style>
+</head>
+<body>
+<h3>API Test — open op GitHub Pages</h3>
+<div id="out"></div>
+<script>
+const out = document.getElementById("out");
+function log(msg, ok) {
+  const d = document.createElement("div");
+  d.className = ok ? "ok" : "err";
+  d.textContent = (ok?"✅ ":"❌ ") + msg;
+  out.appendChild(d);
+}
+
+async function test(label, url) {
+  try {
+    const res = await fetch(url);
+    if (!res.ok) { log(label + " → HTTP " + res.status, false); return false; }
+    const data = await res.json();
+    log(label + " → OK: " + JSON.stringify(data).slice(0,80), true);
+    return true;
+  } catch(e) { log(label + " → " + e.message, false); return false; }
+}
+
+(async () => {
+  log("--- Frankfurter.app ---", true);
+  await test("latest",         "https://api.frankfurter.app/latest?base=USD&symbols=EUR");
+  await test("single date",    "https://api.frankfurter.app/2026-04-01?base=USD&symbols=EUR");
+  await test("date range",     "https://api.frankfurter.app/2026-04-01..2026-05-01?base=USD&symbols=EUR");
+
+  log("--- fawazahmed0 ---", true);
+  await test("latest min",     "https://latest.currency-api.pages.dev/v1/currencies/usd.min.json");
+  await test("date subdom",    "https://2026-05-01.currency-api.pages.dev/v1/currencies/usd.min.json");
+  await test("jsdelivr latest","https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.min.json");
+  await test("jsdelivr date",  "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@2026.5.1/v1/currencies/usd.min.json");
+})();
+</script>
+</body>
+</html>
