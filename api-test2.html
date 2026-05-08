@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Chart URL Test</title>
+<style>body{font-family:monospace;padding:20px;background:#111;color:#eee;font-size:12px;} .ok{color:#4ade80} .err{color:#f97316}</style>
+</head>
+<body>
+<h3>Chart URL Test</h3>
+<div id="out"></div>
+<script>
+const out = document.getElementById("out");
+function log(msg, ok) {
+  const d = document.createElement("div");
+  d.className = ok ? "ok" : "err";
+  d.textContent = (ok?"✅ ":"❌ ") + msg;
+  out.appendChild(d);
+}
+
+async function test(label, url, checkField) {
+  try {
+    const res = await fetch(url);
+    if (!res.ok) { log(label + " → HTTP " + res.status, false); return; }
+    const data = await res.json();
+    const val = checkField ? data[checkField] : data;
+    if (checkField && !val) { log(label + " → field '" + checkField + "' missing", false); return; }
+    log(label + " → OK ✓", true);
+  } catch(e) { log(label + " → " + e.message, false); }
+}
+
+(async () => {
+  // Exact URLs used in the chart code for EUR->JPY (eur base, jpy target)
+  const fl = "eur", tl = "jpy";
+  const today = new Date();
+
+  // Test 5 recent weekdays
+  for (let i = 1; i <= 7; i++) {
+    const d = new Date(today);
+    d.setDate(today.getDate() - i);
+    if (d.getDay() === 0 || d.getDay() === 6) continue;
+    const iso = d.toISOString().split("T")[0];
+    const npmVer = `${d.getFullYear()}.${d.getMonth()+1}.${d.getDate()}`;
+
+    await test(`subdom ${iso}`,
+      `https://${iso}.currency-api.pages.dev/v1/currencies/${fl}.min.json`,
+      fl);
+
+    await test(`jsdelivr ${npmVer}`,
+      `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@${npmVer}/v1/currencies/${fl}.min.json`,
+      fl);
+
+    break; // just test most recent day first
+  }
+
+  // Also test latest
+  await test("latest pages.dev",
+    `https://latest.currency-api.pages.dev/v1/currencies/${fl}.min.json`, fl);
+
+  await test("jsdelivr @latest",
+    `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${fl}.min.json`, fl);
+})();
+</script>
+</body>
+</html>
